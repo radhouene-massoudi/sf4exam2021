@@ -1,0 +1,23 @@
+<table border="2">
+<tr>
+<td>id</td>
+<td>nomPeage</td>
+<td>dateticket</td>
+<td>prix</td>
+<td>voiture</td>
+<td>Actions</td>
+
+</tr>
+{% for car in res%}
+{%if car.nomPeage =='morneg'%}
+<tr>
+<td>{{car.id}}</td>
+<td>{{car.nomPeage}}</td>
+<td>{{car.dateticket | date('y-m-d')}}</td>
+<td>{{car.prix}}</td>
+<td>{{car.voiture.id}}</td>
+<td><a href="{{path('updateticket',{id:car.id})}}">update</a></td>
+</tr>
+{%endif%}
+{%endfor%}
+</table>

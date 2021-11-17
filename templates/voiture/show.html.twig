@@ -1,0 +1,17 @@
+<table border="2">
+<tr>
+<td>id</td>
+<td>type</td>
+<td>Actions</td>
+</tr>
+{% for voiture in res%}
+<tr>
+<td>{{voiture.id}}</td>
+<td>{{voiture.type}}</td>
+<td><a href="{{path('delete',{id:voiture.id})}}">remove</a></td>
+</tr>
+{%endfor%}
+</table>
+nombre de voiture egale {{nb}}
+<br>
+nombre de voiture egale {{res|length}}

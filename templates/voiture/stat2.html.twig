@@ -1,0 +1,17 @@
+<table border="2">
+<tr>
+<td>id</td>
+<td>nomPeage</td>
+<td>dateticket</td>
+<td>prix</td>
+<td>voiture</td>
+<td>Actions</td>
+
+</tr>
+{% for car in res%}
+<tr>
+<td>{{car.id}}</td>
+<td>{{car.type}}</td>
+</tr>
+{%endfor%}
+</table>
